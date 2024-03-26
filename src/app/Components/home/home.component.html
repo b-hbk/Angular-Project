@@ -1,0 +1,62 @@
+<div id="home">
+    <form id="form" (submit)="onSubmit()" [formGroup]="findcar" >  
+        <h2 class="text-center">Book Your Ride with us! </h2>
+        <input type="text" name="Pickup" class="placeholder1"  formControlName="Pickup" placeholder="Pick Up Cites Airport,Hotel"  >
+        <div *ngIf="findcar.controls.Pickup.touched && findcar.controls.Pickup.invalid" class="text-danger">
+<span *ngIf="findcar.controls.Pickup.errors?.['required']">Field cannot be Blank</span>
+<span *ngIf="findcar.controls.Pickup.errors?.['minlength']">Field contain of minimum 4 letters</span>
+        </div>
+        <input type="text" name="Drop" class="placeholder1" formControlName="Drop"  placeholder="Drop Off Cites Airport,Hotel"  >
+        <div *ngIf="findcar.controls.Drop.touched && findcar.controls.Drop.invalid" class="text-danger">
+            <span *ngIf="findcar.controls.Drop.errors?.['required']">Field cannot be Blank</span>
+            <span *ngIf="findcar.controls.Drop.errors?.['minlength']"> Field contain of minimum 4 letters</span>
+            </div>
+        <div><button id="primaryButton"  type="submit" [disabled]="findcar.invalid">FIND CARS</button>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-12 text-center pt-4">
+        <h3>POPULAR CARS IN INDIA</h3>
+    </div>
+</div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+    
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner ">
+        <div class="carousel-item active ">
+          <img src="/../../assets/images/ertiga.jpg" alt="" class=" w-100" height="300">
+          <div class="carousel-caption">
+            <h3>Why Choose us ?</h3>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/../../assets/images/innova.jpeg" alt="Chicago" class=" w-100" height="300">
+          <div class="carousel-caption">
+            <h3>hassle-free booking process</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/../../assets/images/swift.jpeg" alt="New York" class=" w-100" height="300">
+          <div class="carousel-caption">
+            <h3>Our fleet of well-maintained cars</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  

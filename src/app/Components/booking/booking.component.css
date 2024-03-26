@@ -1,0 +1,32 @@
+
+   .car-title{
+       font-size: larger;
+       font-weight: 600;
+   }
+   img{
+       border-radius: 30px;
+       height: auto;
+       width:100%;
+
+   }
+   .car-rating{
+       font-size: smaller;
+       font-weight: 300;
+   }
+   .car-image{
+   border-radius: 40px;
+   }
+   .car-desc{
+      color: rgba(33, 33, 33, 0.658);
+       font-weight: 200;
+   }
+   .car-time{
+       color: rgba(33, 33, 33, 0.658);
+        font-weight: 200;
+    }
+    .car-price{
+       color: rgba(33, 33, 33, 0.658);
+        font-weight: 200;
+        
+    }
+    

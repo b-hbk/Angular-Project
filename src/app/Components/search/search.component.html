@@ -1,0 +1,33 @@
+<div class="container-fluid" style="padding-top: 75px;">
+        <div class="col-17">
+            <div class="card">
+                <h2 class="card-header"><i class="fa fa-car"></i> Choose Car According to your Choice <i class="fa fa-car"></i></h2>
+            </div>
+        </div>
+        <div class="container-fluid" style="padding-top: 75px;">
+            <div class="">
+                <form action="" class="d-flex flex-wrap gap-5 justify-content-center ">
+                    <div *ngFor="let car of cars" class="card col-sm-3 ">
+                        <a [routerLink]="['/booking', car.CarId]">
+                        <section class="card-body ">
+                            <div class="car-image mb-2">
+                                    <img [src]="car.image" alt="" height="200" width="350">
+                            </div>
+                            <div class="car-rating mb-1">
+                                <i class="fa fa-star" aria-hidden="true">{{car.rating}}</i>
+                            </div>
+                            <div class="car-id mb-1">
+                                <i class="fa fa-car" aria-hidden="true">  {{car.CarId}}</i>
+                            </div>
+                            <div class="car-title mb-1">{{car.title}}</div>
+                            <div class="car-desc mb-1">{{car.description}}</div>
+                            <div class="car-price mb-1"><i class="fa fa-inr"> </i> {{car.price}}</div>
+                            <div class="car-location"><i class="fa fa-location"></i> {{car.location}}</div>
+                        </section>
+                    </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        

@@ -1,0 +1,27 @@
+.MainNav{
+    z-index: 1;
+  position:sticky;
+   top: 0px;
+}
+ul li:hover{
+    animation: anim 2s linear 1ms infinite alternate forwards;
+}
+@keyframes anim {
+    from{
+transform: translateX(0%);
+
+    }
+    to{
+        transform: translateX(90%);
+    }
+}
+
+.navbar{
+    background-image:linear-gradient(to right,#bdc3c7 , #f4f7fa);
+}
+.navbar-nav .nav-item .nav-link{
+    color: #bdc3c7 ;
+    font-weight: bold;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+}
+

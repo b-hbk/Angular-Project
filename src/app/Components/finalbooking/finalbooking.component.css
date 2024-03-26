@@ -1,0 +1,11 @@
+@media print {
+    .print {
+        display: none;
+        
+    }
+    
+}
+.card-body{
+    background-image: url('/assets/images/bg-desktop.png');
+
+}

@@ -1,0 +1,48 @@
+
+<div class="container mt-5 p-5">
+  <div class="row justify-content-center">
+  <div class="card col-6 p-2 ">
+    <div class="card-body ">
+    <h1 class="card-header text-center bg-light">
+      <i class="fas fa-receipt"></i> Booking Receipt
+    </h1>
+    <div *ngIf="bookingDetails; else elseBlock" >
+      <div class="col">
+          <h2 class="text-center">Final Booking Details</h2><hr>
+          <p class="fs-5">
+            Car ID <i class="fas fa-car"></i> : {{ bookingDetails.Carid }}
+          </p><hr>
+          <p class="fs-5">
+            Pickup Location <i class="fas fa-map-marker-alt"></i> : {{ bookingDetails.pickup }}
+          </p><hr>
+          <p class="fs-5">
+            Drop Location <i class="fas fa-map-marker-alt"></i> : {{ bookingDetails.drop }}
+          </p><hr>
+          <p class="fs-5">
+            Date <i class="fas fa-calendar-alt"></i> : {{ bookingDetails.date }}
+          </p><hr>
+          <p class="fs-5"> 
+            Time <i class="fas fa-clock"></i> : {{ bookingDetails.time }}
+          </p><hr>
+          <p class="fs-5">
+            Address <i class="fas fa-map-marker-alt"></i> : {{ bookingDetails.address }}
+          </p>
+          <p class="fs-5">
+            Mobile <i class="fas fa-phone"></i> : {{ bookingDetails.mobile }}
+          </p><hr>
+      </div>
+    </div> 
+    <button class="btn btn-info print col-12 " [disabled]="!bookingDetails" (click)="printTicket()">
+      Print
+    </button>
+  </div>
+</div>
+</div>
+</div>
+
+<ng-template #elseBlock>
+  <div>
+    <h2>No Booking Details Found</h2>
+    <p>Please make a booking to see the details.</p>
+  </div>
+</ng-template>

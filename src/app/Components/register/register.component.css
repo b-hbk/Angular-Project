@@ -1,0 +1,12 @@
+.bg{
+    background-image: url('/assets/images/bg-desktop.png');
+    background-size: cover;
+    background-repeat:round;
+    border: 2px solid;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 4px;
+}
+.card{
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px;
+}

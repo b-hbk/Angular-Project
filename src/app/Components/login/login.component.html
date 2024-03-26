@@ -1,0 +1,32 @@
+<div class="pt-5">
+  <div class="container p-5 mt-5">
+      <div class="card col-4 m-4 pt-3">
+        <div class="card-body ">
+          <h2 class="card-header text-center">Login</h2>
+          <div class="form-group">
+            <label>UserEmail</label>
+            <input type="email" name="email" [(ngModel)]="email" class="form-control" >
+            <!-- <div *ngIf="loginForm.controls.emailid.touched && loginForm.controls.emailid.invalid" class="text-danger">
+              <span *ngIf="loginForm.controls.emailid.errors?.['required']">Field cannot be Blank</span>
+              <span *ngIf="loginForm.controls.emailid.errors?.['email']">Invalid email format</span>
+            </div> -->
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div class="input-group">
+              <input type="password" name="password" [(ngModel)]="password" class="form-control" >
+            </div>
+            <!-- <div *ngIf="loginForm.controls.pass.touched && loginForm.controls.pass.invalid" class="text-danger">
+              <span *ngIf="loginForm.controls.pass.errors?.['required']">Field cannot be Blank</span>
+              <span *ngIf="loginForm.controls.pass.errors?.['minlength']">Password should be a minimum of 6 letters</span>
+              <span *ngIf="loginForm.controls.pass.errors?.['maxlength']">Password should be a maximum of 20 letters</span>
+            </div> -->
+          </div>
+        <div class="card-footer  text-center">
+          <button (click)="CustLogin()" type="submit" class="btn btn-outline-success "  >Login</button>
+          <p class="fs-4">Not registered yet, <a class="" routerLink="/register">register here</a></p> 
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
